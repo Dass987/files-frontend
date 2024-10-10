@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import Container from 'react-bootstrap/Container';
+
+// ** Components
+import { FilesList } from './components/FilesList';
+import { FilesFilterInput } from './components/FilesFilterInput';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-app">
+      <Container className="p-4">
+        <h1 className="mb-4 text-center">React Test App</h1>
+        <FilesFilterInput />
+        <FilesList />
+      </Container>
     </div>
   );
 }
