@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with expected output 1`] = `
+<DocumentFragment>
+  <div
+    class="mb-3"
+  >
+    <input
+      aria-describedby="basic-addon1"
+      aria-label="Search"
+      class="form-control form-control-sm"
+      placeholder="Search by file name..."
+    />
+  </div>
+</DocumentFragment>
+`;
