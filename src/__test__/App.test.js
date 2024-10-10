@@ -1,13 +1,18 @@
-import React from 'react'
-import {
-  render,
-  screen,
-} from "@testing-library/react";
-import App from '../App'
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import App from '../App';
+
+import { Provider } from 'react-redux';
+
+import { store } from '../app/store';
 
 test('renders React App Test title', () => {
-  render(<App />)
+  render(
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
 
-  const h1Element = screen.getByText(/React App Test/i)
-  expect(h1Element).toBeInTheDocument()
-})
+  const h1Element = screen.getByText(/React Test App/i);
+  expect(h1Element).toBeInTheDocument();
+});
